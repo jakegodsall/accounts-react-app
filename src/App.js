@@ -1,32 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import UserForm from './components/UserForm/UserForm';
 import UserList from "./components/UserList/UserList";
 
 import './App.css';
 
-const users = [
+const USERS = [
   {
-    name: 'Jake',
+    username: 'Jake',
     age: 27,
     id: 1
   },
   {
-    name: 'Patrycjo',
+    username: 'Patrycjo',
     age: 27,
     id: 2
   },
   {
-    name: 'Nunu',
+    username: 'Nunu',
     age: 4,
     id: 3
   }
 ];
 
 const App = () => {
+
+  const [users, setUsers] = useState(USERS);
+
+  const onSubmitForm = (userData) => {
+    setUsers(prevUsers => {
+      return [userData, ...prevUsers]
+    });
+
+    console.log(users);
+  };
+
   return (
     <>
-      <UserForm />
+      <UserForm onSubmitForm={onSubmitForm} />
       <UserList users={users}/>
     </>
     

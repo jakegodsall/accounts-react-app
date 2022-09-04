@@ -5,7 +5,7 @@ import './User.css';
 const User = props => {
 
     return (
-        <p className="user">{props.name} ({props.age} Years Old)</p>
+        <p className="user">{props.username} ({props.age} Years Old)</p>
     );
 };
 
