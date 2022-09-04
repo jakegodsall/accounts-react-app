@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './User.css';
+
 const User = props => {
 
     return (
-        <h2>{props.name} ({props.age} Years Old)</h2>
+        <p className="user">{props.name} ({props.age} Years Old)</p>
     );
 };
 
