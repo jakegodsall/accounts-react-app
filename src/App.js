@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import UserForm from './components/UserForm/UserForm';
-import UserList from "./components/UserList/UserList";
+import UserForm from './components/Users/UserForm/UserForm';
+import UserList from "./components/Users/UserList/UserList";
 
 import './App.css';
 

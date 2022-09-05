@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from '../UI/Card/Card';
+import Card from '../../UI/Card/Card';
 import User from '../User/User';
 
 const UserList = props => {

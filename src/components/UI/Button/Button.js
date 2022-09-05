@@ -3,9 +3,14 @@ import React from 'react';
 import './Button.css';
 
 const Button = props => {
-
     return (
-        <button className="btn" type="submit">{props.buttonContent}</button>
+        <button
+            className='button'
+            type={props.type || 'button'}
+            onClick={props.onClick}
+        >
+            {props.children}
+        </button>
     );
 };
 
